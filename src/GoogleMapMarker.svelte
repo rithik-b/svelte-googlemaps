@@ -10,9 +10,14 @@
   export let icon
 
   // eslint-disable-next-line no-new
-  new window.google.maps.Marker({
+  const marker = new window.google.maps.Marker({
     position: { lat, lng },
     icon,
     map
   })
+
+  export function removeMarker()
+  {
+    marker.setMap(null);
+  }
 </script>
